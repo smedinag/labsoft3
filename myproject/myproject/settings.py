@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,9 +83,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dblab',
         'USER': 'postgres',
-        'PASSWORD': 'mypassword', ##contrasena del usuario de postgres
-        'HOST': '127.0.0.1', ## Linux-->UNIX domain socket i--> pg_hba.conf
+        'PASSWORD': 'blaumond', ##contrasena del usuario de postgres
+        'HOST': '127.0.0.1',  ## --> localhost  ## Linux-->UNIX domain socket i--> pg_hba.conf
         'PORT': '5432',
+
+        #'TEST': {
+        #    'NAME': 'mytestdatabase',
+        #},
     }
 }
 
@@ -110,9 +115,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
-
+## ponerlo en espanol!!!
 LANGUAGE_CODE = 'en-us'
-
+## cambiar zona horario de colombia --> UTC -5
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
