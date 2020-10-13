@@ -74,9 +74,17 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dblab',
+        'USER': 'postgres',
+        'PASSWORD': 'mypassword', ##contrasena del usuario de postgres
+        'HOST': '127.0.0.1', ## Linux-->UNIX domain socket i--> pg_hba.conf
+        'PORT': '5432',
     }
 }
 
